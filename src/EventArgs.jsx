@@ -12,18 +12,18 @@ export default function StateTodo(){
     setTitle(e.target.value);
   };
 
-  const handleClick = () => {
+  const handleClick = e => {
     setTodo([
-      ...todo,
       {
-        id : ++maxId,
-        title,
-        created : new Date(),
-        isDone : false
-      }
-    ]);
-  };
-
+      ...todo,
+      id: ++maxId,
+      title,
+      created: new Date(),
+      isDone: false
+    }
+  ])
+  }
+  
   const handleDone = e => {
     setTodo(todo.map(item => {
       if(item.id === Number(e.target.dataset.id)){
