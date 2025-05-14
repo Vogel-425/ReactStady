@@ -1,5 +1,7 @@
 import React from "react";
 import{useState} from 'react';
+import './EventArgs.css';
+
 //サンプルコードをテストしたい場合はexportから下を変更する
 let maxId = 0;
 export default function StateTodo(){
@@ -42,11 +44,6 @@ export default function StateTodo(){
      </label>
      <button type="button" onClick={handleClick}>追加</button>
      <hr />
-     <ul>
-      {todo.map(item =>(
-        <li key={item.id}>{item.title}</li>
-      ))}
-     </ul>
      <ul>
       {todo.map(item =>(
         <li key={item.id}
